@@ -1,21 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- the router outlet, where all matched components would ber viewed -->
+  <router-link v-bind:to="'/'">Home</router-link>
+<router-link v-bind:to="'/about'">About</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
 </script>
-
+<!-- styling for the component -->
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
